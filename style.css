@@ -91,19 +91,16 @@ body{
 @media (max-width: 570px) {
     .malone2{
         font-size: 1.7rem;
-        text-shadow: 0 0 5px #8f6313, 
-                    0 0 20px #8f6313, 
-                    0 0 0px #8f6313,
-                    0 0 60px #8f6313;
+        text-shadow: 0 0 5px #8f6313;
     }
     .malone2::before {
         content: '';
         position: absolute;
         background-color: #8f6313;
-        top: 120%;
-        right: 30%;
-        width: 50%;
-        height: 50%;
+        top: 100%;
+        right: 25%;
+        width: 60%;
+        height: 60%;
         transform: perspective(1rem) rotateX(40deg) scale(1, 0.35);
         filter: blur(0.6rem);
     }
@@ -117,10 +114,7 @@ body{
         color: #8f6313;
         position: relative;
         font-weight: 600;
-        text-shadow: 0 0 5px #8f6313, 
-                    0 0 0px #8f6313, 
-                    0 0 30px #8f6313,
-                    0 0 50px #8f6313;
+        text-shadow: 0 0 2px #8f6313;
         cursor: pointer;
     }
 }
@@ -383,7 +377,7 @@ main {
     padding: 90px 120px 50px;
 }
 section {
-    padding: 50px 0px;
+    padding: 150px 0px 20px;
     width: 100%;
 }
 @media (max-width: 800px){
@@ -398,7 +392,7 @@ section {
         
     }
 }
-@media (max-width: 380px){
+@media (max-width: 420px){
     main {
         max-width: 400px;
         min-height: 100vh;
@@ -406,7 +400,7 @@ section {
     }
     section {
         margin: 0px auto;
-        padding: 150px 0px 50px;
+        padding: 200px 0px 0px;
     }
 }
 #home{
@@ -423,9 +417,9 @@ section {
     font-weight: 600;
 }
 .eze{
-    margin: 0px;
-    padding: 0px;
-    font-size: clamp(20px, 7vw, 100px);
+    margin-bottom: -10px;
+    padding: 0px 0 0px;
+    font-size: clamp(25px, 7vw, 100px);
     font-weight: 600;
     /* color: #b8b7b7e8; */
     letter-spacing: 5px;
@@ -458,8 +452,7 @@ section {
     }
 } */
 .front{
-    margin: 0px;
-    font-size: clamp(14px, 5vw, 40px);
+    font-size: clamp(15px, 5vw, 30px);
     font-weight: 400;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     margin-bottom: 10px;
@@ -469,7 +462,7 @@ section {
 .web{
     /* max-width: 0px; */
     max-width: 600px;
-    font-size: clamp(12px, 3vw, 20px);
+    font-size: clamp(15px, 3vw, 20px);
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     color: #8f6313;
     line-height: 28px;

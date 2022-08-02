@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4feeda6880.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="nav.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +23,8 @@
         <div class="layout">
             <header class="navheader">
                 <nav class="navstyle">
-                    <div class="logo fade-enter-done">
-                        <a href="home.html"><img src="/Frame 1.png" alt="logo"></a>
+                    <div class="text2">
+                        <p class="malone2">MALONE</p>
                     </div>
 
                     <button class="mobilenavtoggle" aria-controls="navstylelink" aria-expanded="false">
@@ -34,13 +33,16 @@
                     <div class="navstylelink"
                     data-visible="false" id="navstylelink">
                         <ol>
-                            <li><a href="#about">ABOUT ME</a></li>
-                            <li><a href="#services">SERVICES</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href="#about" class="menu1">ABOUT ME</a></li>
+                            <li><a href="#services" class="menu1">SERVICES</a></li>
+                            <li><a href="#services" class="menu1">PORTFOLIO</a></li>
+                            <li><a href="#contact" class="menu1">CONTACT</a></li>
+                            <li><div class="resumebutton">
+                                <a class="button" href="#">RESUME</a>
+                            </div>
+                            </li>
                         </ol>
-                        <div class="resumebutton">
-                            <a class="button" href="#">RESUME</a>
-                        </div>
+                        
                     </div>
                     
                 </nav>
@@ -68,10 +70,10 @@
                             <h1 class="eze">EZE OBINNA ALEX</h1>
                         </div>
                         <div>
-                            <h2 class="front">Front-End Developer, HTML Email Templates developer and UI/UX Designer</h2>
+                            <h2 class="front">Front-End Developer And HTML Email Templates Developer</h2>
                         </div>
                         <div class="webbox">
-                            <p class="web">I am a Web developer focused mainly on the front-end aspect, HTML email templates with email signatures and UI/UX Designing. <br> I bulid things for the web.</p>
+                            <p class="web">I am a Web developer focused mainly on the front-end aspect and HTML email templates with email signatures. <br> I bulid things for the web.</p>
                         </div>
                     </section>
                     <section id="about" visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;>
@@ -180,5 +182,6 @@
             </div>
         </div>
     </div>
+    <script src="nav.js"></script>
 </body>
 </html>

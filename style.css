@@ -15,6 +15,7 @@ body{
 .layout{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .navheader{
     background-color: #020c1b;
@@ -44,10 +45,9 @@ body{
     color: #8f6313;
     position: relative;
     font-weight: 600;
-    text-shadow: 0 0 10px #8f6313, 
-                0 0 40px #8f6313, 
-                0 0 80px #8f6313,
-                0 0 100px #8f6313;
+    text-shadow: 0 0 5px #8f6313, 
+                0 0 30px #8f6313, 
+                0 0 80px #8f6313;
     animation-name: animate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -372,54 +372,57 @@ body{
 /*main page startin from home*/
 
 main {
-    max-width: 1600px;
+    width: 100%;
     min-height: 100vh;
-    padding: 90px 120px 50px;
+    padding: 50px  0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 section {
-    padding: 150px 0px 20px;
-    width: 100%;
+    padding: 80px 110px;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100vh;
 }
 @media (max-width: 800px){
     main {
-        max-width: 1600px;
-        min-height: 100vh;
-        padding: 90px 50px;
+        padding: 90px 0px;
     }
     section {
         margin: 0px auto;
-        padding: 150px 0px;
-        
+        padding: 100px 50px;
+        height: 100%;
     }
 }
 @media (max-width: 420px){
     main {
         max-width: 400px;
         min-height: 100vh;
-        padding: 90px 20px;
+        padding: 90px 0px;
     }
     section {
         margin: 0px auto;
-        padding: 200px 0px 0px;
+        padding: 90px 20px 30px;
+        height: 100%;
     }
 }
 #home{
     display: flex;
-
     flex-direction: column;
     justify-content: center;
 }
 .hi {
-    margin: 10px 10px 10px 4px;
+    margin: 20px 10px -20px 4px;
     color: #8f6313;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    font-size: clamp(1rem,5vw,2rem);
+    font-size: clamp(1.1rem,4vw,3rem);
     font-weight: 600;
 }
 .eze{
-    margin-bottom: -10px;
-    padding: 0px 0 0px;
-    font-size: clamp(25px, 7vw, 100px);
+    margin-bottom: -20px;
+    padding:0px;
+    font-size: clamp(29px, 8vw, 150px);
     font-weight: 600;
     /* color: #b8b7b7e8; */
     letter-spacing: 5px;
@@ -431,12 +434,6 @@ section {
     animation: animate 2s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, .03);
-    /* color: transparent;
-    -webkit-text-stroke: 1px #b8b7b7e8;
-    background: url(/back.png);
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    animation: back 20s linear infinite; */
 }
 @keyframes animate {
     0% {
@@ -446,13 +443,8 @@ section {
         background-position: 500%;
     }
 }
-/* @keyframes back{
-    100%{
-        background-position: 2000px 0;
-    }
-} */
 .front{
-    font-size: clamp(15px, 5vw, 30px);
+    font-size: clamp(16px, 6vw, 40px);
     font-weight: 400;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     margin-bottom: 10px;
@@ -460,24 +452,61 @@ section {
 }
 
 .web{
-    /* max-width: 0px; */
     max-width: 600px;
-    font-size: clamp(15px, 3vw, 20px);
+    font-size: clamp(15px, 2vw, 30px);
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     color: #8f6313;
-    line-height: 28px;
+    line-height: 38px;
     letter-spacing: 1.2px;
 }
-
+@media (max-width: 420px) {
+    .hi {
+        margin: 20px 10px -0px 4px;
+        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+        font-size: clamp(1.1rem,4vw,3rem);
+    }
+    .eze{
+        margin-bottom: -10px;
+    }
+    .web{
+        max-width: 600px;
+        font-size: clamp(15px, 2vw, 30px);
+        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+        color: #8f6313;
+        line-height: 28px;
+        letter-spacing: 1.2px;
+    }
+}
+.chevron{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.fa-angles-down{
+    color: #8f6313;
+    position: relative;
+    animation-name: down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes down {
+    from {top: 0px;}
+    to {top: 50px; }
+}
+.fa-angles-down:hover{
+    padding-top: 20px;
+}
 
 /*about me page*/
 .aboutme {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0px 40px;
+    margin: 10px 0 40px;
     width: 100%;
-    font-size: clamp(24px,5vw,28px);
+    font-size: clamp(24px,5vw,30px);
     white-space: nowrap;
     font-family: 'Courgette', cursive;
     color: #8f6313;
@@ -487,7 +516,7 @@ section {
     display: block;
     position: relative;
     top: -2px;
-    width: 400px;
+    width: 50%;
     height: 1px;
     margin-left: 20px;
     background-color: #8f641398;
@@ -497,21 +526,29 @@ section {
     display: block;
     position: relative;
     top: -2px;
-    width: 400px;
+    width: 50%;
     height: 1px;
     margin-right: 20px;
     background-color: #8f641398;
 }
 section .aboutcontent{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 50px;
-    font-size: clamp(7px, 4vw, 17px);
+    font-size: clamp(14px, 2vw, 18px);
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     color: rgba(255, 255, 255, 0.376);
     text-align: justify;
     letter-spacing: 1.2px;
     line-height: 1.3;
+    width: 100%;
+}
+.meetme{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.meetme p{
+    width: 60%;
+    margin-right: 40px;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 .wix{
     text-decoration: none;
@@ -520,82 +557,259 @@ section .aboutcontent{
 .wix:hover{
     text-decoration: underline;
 }
-.skill-tool{
-    display: flex;
-    justify-content: space-between;
-}
-.skill-list, .tool-list{
-    list-style-type: circle;
-}
-H4{
-    text-align: center;
-    line-height: 0;
-}
 
 .alexphoto {
     position: relative;
-    max-width: 350px;
-}
-.alexphoto div {
+    max-width: 400px;
+    overflow: hidden;
+    width: 50%;
+    height: 340px;
     background-image: url(/20211227_082008.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 10px 30px -15px #010710;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    display: block;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+/* skills start */
+.skillcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 50px;
+}
+.skill_title h2{
+    font-size: 20px;
+    color: #8f6313;
+    margin-bottom: 50px;
+}
+.contain{
     position: relative;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contain .card{
+    position: relative;
+    width: 190px;
+    height: 210px;
+    background-color: #010a1a;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    border-radius:5px;
-    /*background-color: #8f6313;*/
+.contain .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}
+.contain .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.contain .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: black;
+    transform: translate(5px, 5px);
+}
+.contain .card .percent svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 4.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
     }
-.alexphoto div::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius:5px;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    top: 0px;
-    left: 0px;
-    background-color: #8f6413a4;
-    mix-blend-mode: screen;
+    100%{
+        opacity: 1;
     }
-.alexphoto div:hover:before {
-    display: none;
 }
-.alexphoto div img{
-    border-radius:5px;
-}
-.alexphoto div::after {
-    content: "";
-    display: block;
+.dot{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    border: 2px solid #8f6313;
-    top: 20px;
-    left: 20px;
-    z-index: -1;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: dot 5s linear forwards;
 }
-.alexphoto div:hover::after{
-    content: "";
-    display: block;
+@keyframes dot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    border: 2px solid #8f6313;
-    top: 10px;
-    left: 10px;
-    z-index: -1;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
 }
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 4.5s;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2.5em;
+
+    margin-block: 0;
+}
+.number h2 span{
+    font-weight: 300;
+    color: white;
+    font-size: 0.5em;
+}
+.number p{
+    font-weight: 300;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2px;
+}
+/* skills end */
+
 /*teblet about me*/
+
+@media (max-width: 1088px){
+        /* skills start */
+        .contain .card{
+            width: 150px;
+            height: 160px;
+        }
+    
+        .contain .card .percent{
+            position: relative;
+            width: 110px;
+            height: 110px;
+    
+        }
+        .contain .card .percent svg{
+            width: 110px;
+            height: 110px;
+        }
+        .contain .card .percent svg circle{
+            cx:50;
+            cy:50;
+            r:50;
+        }
+        .contain .card .percent svg circle:nth-child(2) {
+            stroke-dasharray: 310;
+            stroke-dashoffset: calc(310 - (310 * var(--num)) / 100);
+        }
+        .dot::before{
+            top: -2px;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+        }
+        .number h2{
+            font-weight: 500;
+            font-size: 2em;
+            margin-block: 0;
+        }
+        .number h2 span{
+            font-weight: 300;
+            color: white;
+            font-size: 0.5em;
+        }
+        .number p{
+            font-weight: 300;
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            margin-top: 2px;
+        }
+}
+@media (max-width: 929px){
+    /* skills start */
+    .contain{
+        gap: 25px;
+    }
+    .contain .card{
+        width: 120px;
+        height: 130px;
+    }
+
+    .contain .card .percent{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+    }
+    .contain .card .percent svg{
+        width: 100px;
+        height: 100px;
+    }
+    .contain .card .percent svg circle{
+        cx:45;
+        cy:45;
+        r:45;
+    }
+    .contain .card .percent svg circle:nth-child(2) {
+        stroke-dasharray: 280;
+        stroke-dashoffset: calc(280 - (280 * var(--num)) / 100);
+    }
+    .dot::before{
+        top: -2px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+    }
+    .number h2{
+        font-weight: 500;
+        font-size: 1.7em;
+        margin-block: 0;
+    }
+    .number h2 span{
+        font-weight: 300;
+        color: white;
+        font-size: 0.5em;
+    }
+    .number p{
+        font-weight: 300;
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: white;
+        margin-top: 2px;
+    }
+}
 @media (max-width: 800px){
     section .aboutcontent{
         display: block;
@@ -603,64 +817,105 @@ H4{
     }
     .alexphoto {
         position: relative;
-        max-width: 450px;
+        max-width: 350px;
         margin: 0 auto;
     }
-    .alexphoto div {
+    .meetme{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .meetme p{
+        width: 75%;
+        margin-right: 0px;
+        font-size: clamp(14px, 1.5vw, 18px);
+    }
+    .alexphoto {
+        position: relative;
+        max-width: 400px;
+        overflow: hidden;
+        width: 25%;
+        height: 170px;
         background-image: url(/20211227_082008.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 0 10px 30px -15px #010710;
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        display: block;
-        width: 90%;
-        height: 50vh;
-        border-radius:5px;
-        }
-    .alexphoto div::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius:5px;
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        top: 0px;
-        left: 0px;
-        background-color: #8f6413a4;
-        mix-blend-mode: screen;
-        }
-    .alexphoto div:hover:before {
-        display: none;
+        background-size: 100% 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
     }
-    .alexphoto div img{
-        border-radius:5px;
+    
+        /* skills start */
+    .contain .card{
+        width: 110px;
+        height: 120px;
     }
-    .alexphoto div::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        border: 2px solid #8f6313;
-        top: 20px;
-        left: 20px;
-        z-index: -1;
+
+    .contain .card .percent{
+        position: relative;
+        width: 90px;
+        height: 90px;
+
     }
-    .alexphoto div:hover::after{
-        content: "";
-        display: block;
-        position: absolute;
+    .contain .card .percent svg{
+        width: 90px;
+        height: 90px;
+    }
+    .contain .card .percent svg circle{
+        cx:40;
+        cy:40;
+        r:40;
+    }
+    .contain .card .percent svg circle:nth-child(2) {
+        stroke-dasharray: 250;
+        stroke-dashoffset: calc(250 - (250 * var(--num)) / 100);
+    }
+    .dot::before{
+        top: -2px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+    }
+    .number h2{
+        font-weight: 500;
+        font-size: 1.5em;
+        margin-block: 0;
+    }
+    .number h2 span{
+        font-weight: 300;
+        color: white;
+        font-size: 0.5em;
+    }
+    .number p{
+        font-weight: 300;
+        font-size: 0.5em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: white;
+        margin-top: 2px;
+    }
+}
+@media (max-width: 500px) {
+    .meetme{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        border: 2px solid #8f6313;
-        top: 10px;
-        left: 10px;
-        z-index: -1;
+    }
+    .meetme p{
+        width: 100%;
+        margin-right: 0px;
+        font-size: clamp(14px, 1.5vw, 18px);
+    }
+    .alexphoto {
+        position: relative;
+        max-width: 400px;
+        overflow: hidden;
+        width: 80%;
+        height: 40vh;
+        background-image: url(/20211227_082008.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 10px;
+        margin: 5px auto;
     }
 }
 
@@ -681,7 +936,7 @@ H4{
     display: block;
     position: relative;
     top: -2px;
-    width: 400px;
+    width: 50%;
     height: 1px;
     margin-left: 20px;
     background-color: #8f641398;
@@ -691,38 +946,11 @@ H4{
     display: block;
     position: relative;
     top: -2px;
-    width: 400px;
+    width: 50%;
     height: 1px;
     margin-right: 20px;
     background-color: #8f641398;
 }
-/*.projectcontent {
-    position: relative;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-}
-.projectcontent:nth-of-type(2n+1) .spaceproject {
-    grid-column: 7 / -1;
-    text-align: right;
-}
-.projectcontent .spaceproject {
-    position: relative;
-    grid-area: 1 / 1 / -1 / 7;
-    z-index: 5;
-}
-.projectcontent:nth-of-type(2n+1) .projectimage {
-    grid-column: 1 / 8;
-}
-.projectcontent .projectimage {
-    box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    grid-area: 1 / 6 / -1 / -1;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-}*/
 .projectcontent{
     width: 100%;
     margin: 0;
@@ -735,7 +963,6 @@ H4{
     height: 470px;
     background-image: url(/spacepic.png);
     background-repeat: no-repeat;
-    background-position: ;
     background-size: cover;
     position: relative;
     border-radius: 8px;
@@ -1057,21 +1284,18 @@ H4{
 
 /*contact*/
 #contact {
-    margin: 0px auto;
-    padding: 120px 0px;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 80px 10px;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100vh;
 }
 .what {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0px 10px;
+    margin: 10px 0px 40px;
     width: 100%;
-    font-size: clamp(14px,5vw,20px);
+    font-size: clamp(8px,4vw,28px);
     white-space: nowrap;
     font-family: 'Courgette', cursive;
     color: #8f6313;
@@ -1081,7 +1305,7 @@ H4{
     display: block;
     position: relative;
     top: -2px;
-    width: 415px;
+    width: 50%;
     height: 1px;
     margin-left: 20px;
     background-color: #8f641398;
@@ -1091,10 +1315,18 @@ H4{
     display: block;
     position: relative;
     top: -2px;
-    width: 415px;
+    width: 50%;
     height: 1px;
     margin-right: 20px;
     background-color: #8f641398;
+}
+.contactcontent{
+    width: 100%;
+    margin: 0;
+    max-width: 1000px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 .get{
     font-size: clamp(20px, 8vw, 60px);
@@ -1114,7 +1346,7 @@ H4{
     margin-top: 0;
 }
 .contactbox{
-    width: 50%;
+    width: 100%;
     min-width: 200px;
     margin: o auto;
     padding: 20px;
@@ -1140,7 +1372,7 @@ H4{
     resize: vertical;
 }
 .buttonsubmit{
-    width: 101%;
+    width: 100%;
     border: none;
     outline: none;
     border-radius: 5px;

@@ -35,7 +35,7 @@
                         <ol>
                             <li><a href="#about" class="menu1">ABOUT ME</a></li>
                             <li><a href="#services" class="menu1">SERVICES</a></li>
-                            <li><a href="#services" class="menu1">PORTFOLIO</a></li>
+                            <li><a href="#portfolio" class="menu1">PORTFOLIO</a></li>
                             <li><a href="#contact" class="menu1">CONTACT</a></li>
                             <li><div class="resumebutton">
                                 <a class="button" href="#">RESUME</a>
@@ -75,8 +75,13 @@
                         <div class="webbox">
                             <p class="web">I am a Web developer focused mainly on the front-end aspect and HTML email templates with email signatures. <br> I bulid things for the web.</p>
                         </div>
+                        <div class="chevron">
+                            <a href="#about">
+                                <i class="fa-solid fa-angles-down fa-2xl fa-flip" style="--fa-animation-duration: 5s;" ></i>
+                            </a>
+                        </div>
                     </section>
-                    <section id="about" visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;>
+                    <section id="about" visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; loading="lazy">
                         <div>
                             <h3 class="aboutme">ABOUT ME</h3>
                         </div>
@@ -84,33 +89,73 @@
                             <div class="aboutbody">
                                 <div class="meetme">
                                     <p>Hello! I'm Alex and was born to build both on and off internet. My interest in web development started back in 2017 when i used <a href="https://manage.wix.com/account/sites" class="wix">wix.com</a> template to create something. But after trying for sometime, there was no feeling of ownership and this joy of building from scratch was missing. This pushed me to look for a better way to build something awesome, here i am now. <br> I'm also an artist who draws both personally and professionally, So that prompted me to go into graphic design then UI/UX design. My main focus these days is building responsive,  innovative, great user interface and  experiences website for my clients. </p>
-                                </div>
-                                <div class="skill-tool">
-                                    <div class="skill">
-                                        <h4>SKILLS</h4>
-                                        <ul class="skill-list">
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>JAVASCRIPT</li>
-                                            <li>FIGMA</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tool">
-                                        <H4>TOOLS</H4>
-                                        <ul class="tool-list">
-                                            <li>VS code</li>
-                                            <li>Brave browser</li>
-                                            <li>PutsEmail</li>
-                                        </ul>
+                                    <div class="alexphoto">
+                                        <!--<img src="/20211227_082008.jpg" width="460" height="345" class="aphoto">-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="alexphoto">
-                                <div><!--<img src="/20211227_082008.jpg" alt="alex" class="aphoto" width="350px">--></div>
+                            <div class="skillcontent">
+                                <div class="skill_title">
+                                    <h2>SKills</h2>
+                                </div>
+                                <div class="contain">
+                                    <div class="card">
+                                        <div class="percent" style="--clr:#04fc43;--num:81;">
+                                            <div class="dot"></div>
+                                            <svg>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                            </svg>
+                                            <div class="number">
+                                                <h2>81 <span>%</span></h2>
+                                                <p>Html</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="percent" style="--clr:#04fc43;--num:95;">
+                                            <div class="dot"></div>
+                                            <svg>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                            </svg>
+                                            <div class="number">
+                                                <h2>95 <span>%</span></h2>
+                                                <p>css</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="percent" style="--clr:#fee800;--num:60;">
+                                            <div class="dot"></div>
+                                            <svg>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                            </svg>
+                                            <div class="number">
+                                                <h2>60 <span>%</span></h2>
+                                                <p>javascript</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="percent" style="--clr:red;--num:20;">
+                                            <div class="dot"></div>
+                                            <svg>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                                <circle cx="70" cy="70" r="70"></circle>
+                                            </svg>
+                                            <div class="number">
+                                                <h2>20 <span>%</span></h2>
+                                                <p>react</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
-                    <section id="services">
+                    <section id="portfolio">
                         <div class="somethings">
                             <h2>Some Things I've Built</h2>
                         </div>
@@ -140,28 +185,29 @@
                         <h3 class="what">
                             What's Next?
                         </h3>
-                        <h2 class="get">Get In Touch</h2>
-                        <p class="my">My inbox is always open.</p>
-                        <div class="contactbox">
-                            <form action="https://formspree.io/f/xzboywez" method="post" id="my-form">
-                                <div class="formgroup">
-                                    <input type="Name" id="name" name="Name" placeholder="Your Name">
-                                </div>
-                                <div class="formgroup">
-                                    <input type="Email" id="email" name="Email" placeholder="Your Email">
-                                </div>
-                                <div class="formgroup">
-                                    <input type="subject" id="subject" name="subject" placeholder="Subject">
-                                </div>
-                                <div class="formgroup">
-                                    <textarea type="text area" id="message" name="message" placeholder="Your Message"></textarea>
-                                </div>
-                                <button class="buttonsubmit" type="submit">Submit</button>
-                            </form>
-                            
-                        </div>
-                        <div id="status" class="error">
-                            Success!!!
+                        <div class="contactcontent">
+                            <h2 class="get">Get In Touch</h2>
+                            <p class="my">My inbox is always open.</p>
+                            <div class="contactbox">
+                                <form action="https://formspree.io/f/xzboywez" method="post" id="my-form">
+                                    <div class="formgroup">
+                                        <input type="Name" id="name" name="Name" placeholder="Your Name">
+                                    </div>
+                                    <div class="formgroup">
+                                        <input type="Email" id="email" name="Email" placeholder="Your Email">
+                                    </div>
+                                    <div class="formgroup">
+                                        <input type="subject" id="subject" name="subject" placeholder="Subject">
+                                    </div>
+                                    <div class="formgroup">
+                                        <textarea type="text area" id="message" name="message" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <button class="buttonsubmit" type="submit">Submit</button>
+                                </form>
+                            </div>
+                            <div id="status" class="error">
+                                Success!!!
+                            </div>
                         </div>
                     </section>
                 </main>

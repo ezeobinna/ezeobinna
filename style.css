@@ -248,8 +248,8 @@ body{
     .menu1::before{
         display: none;
     }
-    .menu1:focus {
-        border-bottom: 2px solid #8f6313;
+    .menu1:hover::before{
+        width: none;
     }
     .resumebutton{
         border: 2px solid #8f6313;

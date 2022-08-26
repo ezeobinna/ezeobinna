@@ -407,14 +407,14 @@ section {
     justify-content: center;
 }
 .hi {
-    margin: 20px 10px -20px 4px;
+    margin: 20px 10px 20px 4px;
     color: #8f6313;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     font-size: clamp(1.1rem,4vw,3rem);
     font-weight: 600;
 }
 .eze{
-    margin-bottom: -20px;
+    margin-bottom: 10px;
     padding:0px;
     font-size: clamp(29px, 8vw, 150px);
     font-weight: 600;
@@ -460,7 +460,7 @@ section {
         font-size: clamp(1.1rem,4vw,3rem);
     }
     .eze{
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
     .web{
         max-width: 600px;
@@ -909,7 +909,7 @@ section .aboutcontent{
         background-repeat: no-repeat;
         background-size: 100% 100%;
         border-radius: 10px;
-        margin: 5px auto;
+        margin: 10px auto;
     }
 }
 
@@ -930,12 +930,8 @@ section .aboutcontent{
     display: inline-block;
     font-size: 15px;
     margin-bottom: 10px;
+    text-align: justify;
     color: rgb(111, 111, 111);
-}
-
-.qualification_calender{
-    font-size: 12px;
-    color: rgb(65, 80, 80);
 }
 
 .qualification_rounder{
@@ -1463,10 +1459,10 @@ section .aboutcontent{
 }
 @media (max-width: 800px){
     .contactbox{
-        width: 100%;
+        width: 90%;
         min-width: 200px;
         margin: o auto;
-        padding: 30px;
+        padding: 20px;
         box-shadow: 0 0 30px black;
         background-color: #94815d83;
         border-radius: 5px;
@@ -1583,7 +1579,7 @@ footer div a{
         display: flex;
     }
     .downicon li{
-        padding-right: 30px;
+        padding: 20px;
         list-style-type: none;
         color: #8f6313;
     }

@@ -22,6 +22,7 @@ body{
     background-color: #020c1b;
     position: fixed;
     top: 0px;
+    padding-block: 20px;
     left: 0;
     width: 100%;
     z-index: 11;
@@ -55,15 +56,6 @@ body{
     animation-timing-function: linear;
     cursor: pointer;
 }
-/* @keyframes animate {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
-} */
-
 .malone2::before {
     content: '';
     position: absolute;
@@ -295,7 +287,7 @@ body{
     width: 40px;
     position: fixed;
     bottom: 0px;
-    left: 10px;
+    left: 35px;
     right: auto;
     z-index: 10;
     display: flex;
@@ -921,7 +913,56 @@ section .aboutcontent{
     }
 }
 
-/*services*/
+/* services */
+.qualification_data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.qualification_title{
+    font-size: clamp(10px,4vw,25px);
+    font-weight: 500;
+    color: #8f6313;
+}
+.qualification_subtitle{
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: rgb(111, 111, 111);
+}
+
+.qualification_calender{
+    font-size: 12px;
+    color: rgb(65, 80, 80);
+}
+
+.qualification_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #8f6313;
+    border-radius: 50%;
+}
+
+.qualification_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #9f6f15;
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content] {
+    display: none;
+}
+
+.qualification_active[data-content] {
+    display: block;
+}
+
+/*porfolio*/
 .somethings {
     display: flex;
     align-items: center;
@@ -1291,7 +1332,7 @@ section .aboutcontent{
     position: relative;
     margin: 10px 0px 40px;
     width: 100%;
-    font-size: clamp(8px,4vw,28px);
+    font-size: clamp(20px,5vw,28px);
     white-space: nowrap;
     font-family: 'Courgette', cursive;
     color: #8f6313;
@@ -1336,7 +1377,7 @@ section .aboutcontent{
     margin-bottom: 15px;
 }
 .my{
-    font-size: clamp(10px, 3vw, 20px);
+    font-size: clamp(14px, 3vw, 20px);
     font-weight: 400;
     color: #b8b7b7c5;
     line-height: 1.1;

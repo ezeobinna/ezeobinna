@@ -398,12 +398,14 @@ section {
     section {
         margin: 0px auto;
         padding: 90px 20px 30px;
+        height: 100%;
     }
 }
 #home{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
 .hi {
     margin: 20px 10px 20px 4px;
@@ -453,6 +455,9 @@ section {
     letter-spacing: 1.2px;
 }
 @media (max-width: 420px) {
+    #home{
+        height: 100vh;
+    }
     .hi {
         margin: 20px 10px -0px 4px;
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;

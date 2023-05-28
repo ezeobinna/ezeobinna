@@ -393,11 +393,11 @@ section {
     main {
         max-width: 400px;
         min-height: vh;
-        padding: 50px 0px;
+        padding: 20px 0px;
     }
     section {
         margin: 0px auto;
-        padding: 50px 20px 30px;
+        padding: 20px 20px 30px;
         height: 100%;
     }
 }
@@ -506,12 +506,12 @@ section {
         height: 100vh;
     }
     .hi {
-        margin: 20px 10px -0px 4px;
+        margin: 20px 10px 20px 4px;
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
         font-size: clamp(1.1rem,4vw,3rem);
     }
     .eze{
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .web{
         max-width: 600px;

@@ -499,6 +499,11 @@ section {
         min-width: 196px;
     }
 }
+@media (max-width: 420px){
+    .contactbutton{
+        margin-top: 40px;
+    }
+}
 
 
 @media (max-width: 420px) {

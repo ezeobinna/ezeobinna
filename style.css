@@ -991,6 +991,11 @@ section .aboutcontent{
 }
 
 /*porfolio*/
+#portfolio{
+    height: 100%;
+    width: 90%;
+    margin-bottom: 20px;
+}
 .somethings {
     display: flex;
     align-items: center;
@@ -1022,24 +1027,36 @@ section .aboutcontent{
     margin-right: 20px;
     background-color: #8f641398;
 }
-.projectcontent{
+.projectcontent,
+.projectcontent2{
     width: 100%;
-    margin: 0;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .projectimage{
-    width: 70%;
-    height: 470px;
-    background-image: url(/spacepic.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 60%;
     position: relative;
     border-radius: 8px;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 10px 10px black;
 }  
+.projectimage2{
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px black;
+    margin-right: -150px;
+}
+.projectphoto{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
 .projectimage:hover{
+    box-shadow: 0 20px 50px -20px rgb(0, 0, 0);
+}
+.projectimage2:hover{
     box-shadow: 0 20px 50px -20px rgb(0, 0, 0);
 }
 .projectimage::before {
@@ -1053,19 +1070,93 @@ section .aboutcontent{
     left: 0px;
     inset: 0px;
     z-index: 1;
-    background-color: #8f6413a4;
+    background-color: #8f6413bf;
+    mix-blend-mode: screen;
+}
+.projectimage2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius:8px;
+    top: 0px;
+    left: 0px;
+    inset: 0px;
+    z-index: 1;
+    background-color: #8f6413bf;
     mix-blend-mode: screen;
 }
 .projectimage:hover::before{
     display: none;
-    transition: all 0.55s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 5s cubic-bezier(0.645,0.45,0.355,1);
+    
+}
+.projectimage2:hover::before{
+    display: none;
+    transition: all 5s cubic-bezier(0.645,0.45,0.355,1);
     
 }
 .spaceproject{
     width: 50%;
+    height: 100%;
     margin-right: -150px;
+    z-index: 5;
+}
+.spaceproject2{
+    width: 50%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
+@media (max-width: 1204px){
+    .projectimage{
+        width: 80%;
+    }
+    .spaceproject{
+        width: 80%;
+        margin-right: -350px;
+    }
+    .projectimage2{
+        width: 80%;
+        margin-right: -350px;
+    }
+    .spaceproject2{
+        width: 80%;
+    }
+}
+@media (max-width: 1024px){
+    .projectimage{
+        width: 90%;
+    }
+    .spaceproject{
+        width: 80%;
+        margin-right: -350px;
+    }
+    .projectimage2{
+        width: 90%;
+        margin-right: -350px;
+    }
+    .spaceproject2{
+        width: 80%;
+    }
 }
 .projectcontent .write-up {
+    box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #021127;
+    color: #919393;
+    font-size: clamp(7px, 3vw, 17px);
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
+.projectcontent2 .write-up {
     box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     position: relative;
@@ -1091,13 +1182,29 @@ section .aboutcontent{
 .projectcontent .project-tool{
     display: flex;
     flex-direction: row;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 15px 0;
+    padding: 0 0 0 0;
+}
+.projectcontent2 .project-tool{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 15px 0;
     padding: 0 0 0 0;
 }
 .projectcontent .project-tool li{
     list-style-type: none;
     margin: 0;
-    padding-right: 40px;
+    padding-right: 20px;
+    font-size: clamp(9px, 2vw, 14px);
+    font-weight: light;
+    color: #919393;
+    z-index: 5;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
+.projectcontent2 .project-tool li{
+    list-style-type: none;
+    margin: 0;
+    padding-right: 20px;
     font-size: clamp(9px, 2vw, 14px);
     font-weight: light;
     color: #919393;
@@ -1112,10 +1219,18 @@ section .aboutcontent{
     font-weight: bold;
     z-index: 5;
 }
+.spaceproject2 .feature{
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-size: clamp(9px, 3vw, 14px);
+    color: #8d5e07;
+    margin-bottom: 0;
+    font-weight: bold;
+    z-index: 5;
+}
 .theme{
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     font-size: clamp(10px, 3vw, 35px);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-top: 0;
     color: #ffffff9f;
     cursor: pointer;
@@ -1137,7 +1252,7 @@ section .aboutcontent{
     list-style-type: none;
 }
 .projectlinkicons li a{
-    margin-right: 40px;
+    margin-right: 20px;
     margin-top: 20px;
     color: #8f6313;
 }
@@ -1146,52 +1261,86 @@ section .aboutcontent{
 }
 
 @media (max-width: 800px){
-    .projectcontent {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width:90%;
-        background-image: url(spacepic.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-blend-mode: darken rgba(0, 0, 0, 0.459) ;
-        height: 47.7vh;
-        padding: 30px;
-        border-radius: 5px;
-        box-shadow: 0 0 20px black;
-    }
-    .projectcontent::before {
-        content: "";
-        display: block;
-        position: absolute;
+    .projectcontent,
+    .projectcontent2{
         width: 100%;
-        height: 57vh;
-        border-radius:5px;
-        top: 0px;
-        left: 0px;
-        inset: 0px;
-        background-color: #1b1711;
-        mix-blend-mode: darken;
+        height: 100%;
+        margin-block: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
     .projectimage{
-        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 20px black;
+    }  
+    .projectimage2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 20px black;
+        padding: 0;
     }
+    .projectphoto{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
     .spaceproject{
-        width: 80%;
+        width: 100%;
+        max-height: 100%;
         z-index: 5;
-        margin: 0;
+        margin: 0; 
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
+        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+        z-index: 5;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #021127c3;
+        color: #919393;
+        font-size: 17px;
+        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    }
+    .spaceproject2{
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        margin: 0px; 
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
+        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+        z-index: 5;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #021127c3;
+        color: #919393;
+        font-size: 17px;
+        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     }
     .write-up {
         box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
         transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
         position: absolute;
         z-index: 5;
-        padding: 10px;
+        padding: 0px;
         border-radius: 5px;
         background-color: #021127;
         color: #919393;
-        font-size: 17px;
+        font-size: clamp(9px, 1vw, 14px);
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     }
     .write-up:hover{
@@ -1208,31 +1357,43 @@ section .aboutcontent{
     .project-tool{
         display: flex;
         flex-direction: row;
-        margin: 10px 0 10px 0;
+        margin: 0;
         padding: 0 0 0 0;
         z-index: 5;
     }
-    .project-tool li{
+    .projectcontent .project-tool li{
         list-style-type: none;
         margin: 0;
-        padding-right: 40px;
+        padding-right: 20px;
         z-index: 5;
-        font-size: 14px;
+        font-size: clamp(10px, 1.5vw, 14px);
         font-weight: light;
         color: #919393;
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     }
     .spaceproject .feature{
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-        font-size: 14px;
+        font-size: clamp(10px, 1.5vw, 14px);
         color: #8d5e07;
         margin-bottom: 0;
         font-weight: bold;
         z-index: 6;
     }
+    .spaceproject2 .feature{
+        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+        font-size: clamp(10px, 1.5vw, 14px);
+        color: #8d5e07;
+        margin-bottom: 0;
+        font-weight: bold;
+        z-index: 6;
+    }
+    .writep{
+        font-size: clamp(9px, 2.5vw, 14px);
+    }
+    
     .theme{
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-        font-size: 35px;
+        font-size: clamp(10px, 3vw, 30px);
         margin-bottom: 10px;
         margin-top: 0;
         color: #ffffff9f;
@@ -1244,57 +1405,46 @@ section .aboutcontent{
         transition: all 0.55s cubic-bezier(0.645,0.045,0.355,1);
     }
 }
-@media (max-width: 380px){
-    .projectcontent {
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        width:90%;
-        background-image: url(spacepic.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-blend-mode: darken rgba(0, 0, 0, 0.459) ;
-        height: 47vh;
-        padding: 0px;
-        border-radius: 5px;
-        box-shadow: 0 0 20px black;
-    }
-    .projectcontent::before {
-        content: "";
-        display: block;
-        position: absolute;
+@media (max-width: 480px){
+    .projectcontent{
         width: 100%;
-        height: 47vh;
-        border-radius:5px;
-        top: 0px;
-        left: 0px;
-        inset: 0px;
-        background-color: #1b1711;
-        mix-blend-mode: darken;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
     .projectimage{
-        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 20px black;
+    }  
+    .projectphoto{
+        width: 100%;
+        height: 100%;
     }
+
     .spaceproject{
-        width: 90%;
+        width: 100%;
+        max-height: 100%;
         z-index: 5;
-        margin: 0;
-        margin-left: 0;
-        height: 90%;
-    }
-    .write-up {
+        margin: 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: c;
         box-shadow: 0 10px 30px -15px rgb(0, 0, 0);
         transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        width: 80%;
         z-index: 5;
-        padding: 2px;
-        height: 30%;
+        padding: 10px;
         border-radius: 5px;
-        background-color: #021127;
+        background-color: #021127c3;
         color: #919393;
-        margin-left: 0;
-        font-size: 7px;
+        font-size: 17px;
         font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     }
     .write-up:hover{

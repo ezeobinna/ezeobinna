@@ -1030,7 +1030,7 @@ section .aboutcontent{
 .projectcontent,
 .projectcontent2{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1051,7 +1051,7 @@ section .aboutcontent{
 .projectphoto{
     width: 100%;
     height: 100%;
-    background-size: cover;
+    border-radius: 8px;
 }
 .projectimage:hover{
     box-shadow: 0 20px 50px -20px rgb(0, 0, 0);
@@ -1070,8 +1070,10 @@ section .aboutcontent{
     left: 0px;
     inset: 0px;
     z-index: 1;
-    background-color: #8f6413bf;
-    mix-blend-mode: screen;
+    background-color: #785410;
+    mix-blend-mode: overlay;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 .projectimage2::before {
     content: "";
@@ -1084,8 +1086,10 @@ section .aboutcontent{
     left: 0px;
     inset: 0px;
     z-index: 1;
-    background-color: #8f6413bf;
-    mix-blend-mode: screen;
+    background-color: #785410fa;
+    mix-blend-mode: overlay;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 .projectimage:hover::before{
     display: none;

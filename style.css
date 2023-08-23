@@ -38,7 +38,6 @@ body{
 
 .logo{
     display: flex;
-    justify-content: ;
     margin-left: 50px;
 }
 .logo img{
@@ -58,7 +57,10 @@ body{
     }
 } */
 @media (max-width: 460px){
-
+    .logo{
+        display: flex;
+        margin-left: 20px;
+    }
     .logo img{
         width: 3em;
         margin-top: 0px;

@@ -321,7 +321,7 @@ main {
     justify-content: center;
 }
 section {
-    padding: 80px 110px;
+    padding: 120px 110px;
     max-width: 1600px;
     margin: 0 auto;
     height: 100%;
@@ -345,7 +345,7 @@ section {
     }
     section {
         margin: 0px auto;
-        padding: 20px 20px 30px;
+        padding: 90px 20px 30px;
         height: 100%;
     }
 }

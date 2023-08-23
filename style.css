@@ -502,7 +502,7 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0 40px;
+    margin: 30px 0 40px;
     width: 100%;
     font-size: clamp(24px,5vw,30px);
     white-space: nowrap;

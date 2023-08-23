@@ -36,86 +36,32 @@ body{
 }
 /* logo start */
 
-.text2{
+.logo{
     display: flex;
-    justify-content: center;
+    justify-content: ;
     margin-left: 50px;
 }
-.malone2{
-    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    font-size: 2.3rem;
-    color: #8f6313;
-    position: relative;
-    font-weight: 600;
-    text-shadow: 0 0 5px #8f6313, 
-                0 0 30px #8f6313, 
-                0 0 80px #8f6313;
-    animation-name: animate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    cursor: pointer;
-}
-.malone2::before {
-    content: '';
-    position: absolute;
-    background-color: #8f6313;
-    top: 120%;
-    right: 30%;
-    width: 50%;
-    height: 50%;
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(0.6em);
+.logo img{
+    width: 6em;
+    margin-top: 0px;
 }
 @media (max-width: 640px){
-    .malone2{
-        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-        font-size: 2rem;
-        color: #8f6313;
-        position: relative;
-        font-weight: 600;
-        text-shadow: 0 0 10px #8f6313, 
-                    0 0 40px #8f6313, 
-                    0 0 80px #8f6313,
-                    0 0 100px #8f6313;
-        cursor: pointer;
+    .logo img{
+        width: 5em;
+        margin-top: 0px;
     }
 }
-@media (max-width: 570px) {
-    .malone2{
-        font-size: 1.7rem;
-        text-shadow: 0 0 5px #8f6313;
+/* @media (max-width: 570px) {
+    .logo img{
+        width: 4em;
+        margin-top: 0px;
     }
-    .malone2::before {
-        content: '';
-        position: absolute;
-        background-color: #8f6313;
-        top: 100%;
-        right: 25%;
-        width: 60%;
-        height: 60%;
-        transform: perspective(1rem) rotateX(40deg) scale(1, 0.35);
-        filter: blur(0.6rem);
-    }
-}
+} */
 @media (max-width: 460px){
 
-    .malone2{
-        font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-        font-size: 1.5
-        rem;
-        color: #8f6313;
-        position: relative;
-        font-weight: 600;
-        text-shadow: 0 0 2px #8f6313;
-        cursor: pointer;
-    }
-}
-@media (max-width: 390px) {
-    .text2{
-        display: flex;
-        justify-content: center;
-        margin-left: 30px;
+    .logo img{
+        width: 3em;
+        margin-top: 0px;
     }
 }
 
